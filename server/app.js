@@ -1,16 +1,20 @@
-var express = require("express");
-var logger = require("morgan");
+const express = require("express");
+const logger = require("morgan");
+const cors = require("cors");
 
-var app = express();
+const app = express();
 
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
+
 app.get("/", (req, res) => {
-  res.set({
-    "Access-Control-Allow-Origin": "http://localhost:3003",
-  });
   res.json({ message: "Hello" });
 });
 
