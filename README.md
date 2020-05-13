@@ -32,3 +32,4 @@ If the front-end requests from the backend it would be considered a cross-origin
 ## Extra
 
 You can checkout a previous commit (4ad9d0486 -- custom) to see a custom approach.
+https://github.com/dci-ber-fbw21/cors-with-express/blob/4ad9d04868bf83e9b8a20856340bbf2a273442ab/server/app.js#L11-L13
